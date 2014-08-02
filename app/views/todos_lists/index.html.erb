@@ -1,0 +1,27 @@
+<h1>Listing todos_lists</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @todos_lists.each do |todos_list| %>
+      <tr>
+        <td><%= todos_list.title %></td>
+        <td><%= todos_list.description %></td>
+        <td><%= link_to 'Show', todos_list %></td>
+        <td><%= link_to 'Edit', edit_todos_list_path(todos_list) %></td>
+        <td><%= link_to 'Destroy', todos_list, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Todos list', new_todos_list_path %>

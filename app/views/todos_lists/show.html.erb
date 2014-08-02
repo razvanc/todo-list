@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @todos_list.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @todos_list.description %>
+</p>
+
+<%= link_to 'Edit', edit_todos_list_path(@todos_list) %> |
+<%= link_to 'Back', todos_lists_path %>
